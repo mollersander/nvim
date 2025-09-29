@@ -2,6 +2,7 @@
 vim.pack.add({
   -- Dependencies
   { src = "https://github.com/nvim-lua/plenary.nvim" },
+  { src = "https://github.com/MunifTanjim/nui.nvim" },
   { src = "https://github.com/nvim-tree/nvim-web-devicons" },
 
   -- Core plugins
@@ -33,6 +34,9 @@ vim.pack.add({
 
   -- Mason stack, autoinstall lsp
   { src = "https://github.com/mason-org/mason.nvim" },
-  { src = "https://github.com/mason-org/mason-lspconfig.nvim" }
-}, { confirm = false })
+  { src = "https://github.com/mason-org/mason-lspconfig.nvim" },
 
+  -- Mason stack, autoinstall lsp
+  { src = "https://github.com/amitds1997/remote-nvim.nvim" },
+
+}, { confirm = false })
