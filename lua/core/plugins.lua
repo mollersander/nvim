@@ -12,8 +12,9 @@ vim.pack.add({
   { src = "https://github.com/nvim-treesitter/nvim-treesitter" },
   { src = "https://github.com/stevearc/oil.nvim" },
 
-  -- Colors
+  -- Appearance
   { src = "https://github.com/shaunsingh/nord.nvim" },
+  { src = "https://github.com/goolord/alpha-nvim" },
 
   -- LSP + completion
   { src = "https://github.com/neovim/nvim-lspconfig" },
