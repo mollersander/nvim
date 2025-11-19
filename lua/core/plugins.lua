@@ -26,6 +26,7 @@ vim.pack.add({
 
   -- Code convenience
   { src = "https://github.com/numToStr/Comment.nvim" },
+  { src = "https://github.com/pocco81/auto-save.nvim" },
   { src = "https://github.com/mbbill/undotree" },
 
   -- Git
