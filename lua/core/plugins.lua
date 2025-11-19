@@ -15,6 +15,7 @@ vim.pack.add({
   -- Appearance
   { src = "https://github.com/shaunsingh/nord.nvim" },
   { src = "https://github.com/goolord/alpha-nvim" },
+  { src = "https://github.com/nvim-lualine/lualine.nvim" },
 
   -- LSP + completion
   { src = "https://github.com/neovim/nvim-lspconfig" },

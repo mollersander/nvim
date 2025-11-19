@@ -4,6 +4,7 @@ require("core.plugins")
 require("core.autocmd")
 
 require("plugins.colorscheme")
+require("plugins.lualine")
 require("plugins.telescope")
 require("plugins.treesitter")
 require("plugins.oil")
