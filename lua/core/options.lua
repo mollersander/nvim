@@ -20,7 +20,7 @@ vim.o.relativenumber = true
 -- visual
 vim.o.termguicolors = true
 vim.o.signcolumn = "yes"
-vim.o.winborder = "rounded"
+-- vim.o.winborder = "rounded"
 vim.opt.scrolloff = 8
 vim.opt.sidescrolloff = 8
 vim.o.wrap = false
