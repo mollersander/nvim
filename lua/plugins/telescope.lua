@@ -1,9 +1,9 @@
+local additional_rg_args = { "--hidden", "--glob", "!**/.git/*", "--glob", "!**/node_modules/*" }
 
 require("telescope").setup({
   defaults = {
     prompt_prefix = "🔍 ",
     selection_caret = " ",
-    -- path_display = { "smart" },
     layout_config = {
       horizontal = { preview_width = 0.55 },
       vertical = { mirror = false },
@@ -15,12 +15,10 @@ require("telescope").setup({
     find_files = {
       hidden = true, -- also show dotfiles
       follow = true, -- follow symlinks
+      find_command = {"rg", "--files", "--hidden", "--glob", "!**/.git/*" },
     },
-    live_grep = {
-      additional_args = function(_)
-        return { "--hidden" }
-      end,
-    },
+    live_grep = { additional_args = additional_rg_args },
+    grep_string = { additional_args = additional_rg_args },
   },
 })
 
