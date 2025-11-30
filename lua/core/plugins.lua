@@ -29,6 +29,7 @@ vim.pack.add({
   { src = "https://github.com/pocco81/auto-save.nvim" },
   { src = "https://github.com/mbbill/undotree" },
   { src = "https://github.com/christoomey/vim-tmux-navigator" },
+  { src = "https://github.com/kylechui/nvim-surround" },
 
   -- Git
   { src = "https://github.com/lewis6991/gitsigns.nvim" },
