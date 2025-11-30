@@ -1,2 +1,2 @@
-require("nivm-surround").setup()
+require("nvim-surround").setup()
 
