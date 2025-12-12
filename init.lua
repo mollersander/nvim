@@ -19,3 +19,5 @@ require("plugins.diffview")
 require("plugins.autosave")
 require("plugins.opencode")
 require("plugins.surround")
+require("plugins.copilot")
+

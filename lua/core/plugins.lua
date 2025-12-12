@@ -45,7 +45,10 @@ vim.pack.add({
   -- Mason stack, autoinstall lsp
   { src = "https://github.com/amitds1997/remote-nvim.nvim" },
 
-  -- OpenCode integration
+  -- AI
   { src = "https://github.com/NickvanDyke/opencode.nvim" },
+
+  { src = "https://github.com/copilotlsp-nvim/copilot-lsp" },
+  { src = "https://github.com/zbirenbaum/copilot.lua" },
 
 }, { confirm = false })
