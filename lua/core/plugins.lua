@@ -13,7 +13,7 @@ vim.pack.add({
   { src = "https://github.com/stevearc/oil.nvim" },
 
   -- Appearance
-  { src = "https://github.com/shaunsingh/nord.nvim" },
+  { src = "https://github.com/sainnhe/gruvbox-material" },
   { src = "https://github.com/goolord/alpha-nvim" },
   { src = "https://github.com/nvim-lualine/lualine.nvim" },
 
