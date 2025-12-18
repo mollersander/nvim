@@ -1,6 +1,8 @@
+require('copilot_cmp').setup()
+
 require('copilot').setup({
   suggestion = {
-    enabled = true,
+    enabled = false,
     auto_trigger = false,
     hide_during_completion = true,
     debounce = 75,
@@ -14,6 +16,8 @@ require('copilot').setup({
       dismiss = "<C-h>",
     },
   },
+  panel = { enabled = false },
+  copilot_model = "",
   workspace_folders = {
     "/Users/sandermoller/Projects/gscan",
     "/home/salamander/dev",

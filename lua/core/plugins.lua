@@ -49,6 +49,7 @@ vim.pack.add({
   { src = "https://github.com/NickvanDyke/opencode.nvim" },
 
   { src = "https://github.com/copilotlsp-nvim/copilot-lsp" },
+  { src = "https://github.com/zbirenbaum/copilot-cmp" },
   { src = "https://github.com/zbirenbaum/copilot.lua" },
 
 }, { confirm = false })
