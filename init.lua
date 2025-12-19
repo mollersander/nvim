@@ -20,4 +20,4 @@ require("plugins.autosave")
 require("plugins.opencode")
 require("plugins.surround")
 require("plugins.copilot")
-
+require("plugins.neoscroll")
