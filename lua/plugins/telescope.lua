@@ -15,7 +15,7 @@ require("telescope").setup({
     find_files = {
       hidden = true, -- also show dotfiles
       follow = true, -- follow symlinks
-      find_command = {"rg", "--files", "--hidden", "--glob", "!**/.git/*" },
+      find_command = { "rg", "--files", "--hidden", "--glob", "!**/.git/*" },
     },
     live_grep = { additional_args = additional_rg_args },
     grep_string = { additional_args = additional_rg_args },
@@ -27,3 +27,4 @@ vim.keymap.set("n", "<leader>ff", builtin.find_files, { desc = "Find files" })
 vim.keymap.set("n", "<leader>fg", builtin.live_grep, { desc = "Live grep" })
 vim.keymap.set("n", "<leader>fb", builtin.buffers, { desc = "Find buffers" })
 vim.keymap.set("n", "<leader>fh", builtin.help_tags, { desc = "Help tags" })
+vim.keymap.set("n", "gr", "<cmd>Telescope lsp_references<cr>", { desc = "List LSP references" })
