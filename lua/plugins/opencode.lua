@@ -4,6 +4,9 @@
 vim.g.opencode_opts = {
   -- Your configuration can go here if needed
   -- See lua/opencode/config.lua for available options
+  provider = {
+    enabled = "tmux",
+  },
 }
 
 -- Required for auto_reload functionality
