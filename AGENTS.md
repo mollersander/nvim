@@ -10,10 +10,10 @@
 ## Code Style Guidelines
 
 ### File Structure
-- Core configuration in `lua/core/` (options, keymaps, plugins, autocmd)
+- Core configuration in `lua/core/` (options, keymaps, autocmd)
 - Plugin configurations in `lua/plugins/` (one file per plugin/feature)
-- Entry point is `init.lua` with modular require statements
-- Each plugin config file should be required in `init.lua`
+- Entry point is `init.lua` which bootstraps lazy.nvim and loads core config
+- Each plugin config file returns a lazy.nvim plugin spec table
 
 ### Lua Conventions
 - Use double quotes for strings: `"string"`
@@ -29,12 +29,21 @@
 - Functions: snake_case following Lua conventions
 - Keymaps: Use descriptive `desc` field for all keymaps
 
-### Plugin Management
-- Use `vim.pack.add()` with full GitHub URLs in `lua/core/plugins.lua`
-- Group related plugins with section comments (Dependencies, Core, Git, LSP, etc.)
-- Each plugin gets its own config file in `lua/plugins/`
-- For plugins without `setup()`: Use `vim.g.<plugin>_opts` (e.g., `vim.g.opencode_opts`)
-- For plugins with `setup()`: Call `require("<plugin>").setup({...})`
+### Plugin Management (lazy.nvim)
+- Use lazy.nvim as the plugin manager (auto-bootstrapped in `init.lua`)
+- Each plugin config file in `lua/plugins/` returns a lazy.nvim spec table
+- Plugin spec format: `return { "owner/repo", opts = {...} }` or with `config` function
+- Lazy-loading strategies:
+  - `lazy = false, priority = 1000` for colorschemes
+  - `event = "VeryLazy"` for non-critical UI plugins
+  - `event = { "BufReadPost", "BufNewFile" }` for buffer-related plugins
+  - `event = "InsertEnter"` for completion/insert-mode plugins
+  - `cmd = "CommandName"` for command-triggered plugins
+  - `keys = {...}` for keymap-triggered plugins
+- For plugins without `setup()`: Use `init` function to set `vim.g.<plugin>_opts`
+- For plugins with `setup()`: Use `config` function with `require("<plugin>").setup({...})`
+- Dependencies declared with `dependencies = { "dep1", "dep2" }`
+- Multi-plugin files return array: `return { {...}, {...} }`
 
 ### Keymap Conventions
 - Leader key is `<space>` (configured in `lua/core/options.lua`)
