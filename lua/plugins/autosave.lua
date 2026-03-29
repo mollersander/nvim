@@ -1,4 +1,7 @@
-local autosave = require("auto-save")
-
-autosave.setup()
-
+return {
+  "pocco81/auto-save.nvim",
+  event = { "InsertLeave", "TextChanged" },
+  config = function()
+    require("auto-save").setup()
+  end,
+}
