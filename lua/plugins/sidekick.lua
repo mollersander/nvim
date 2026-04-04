@@ -12,6 +12,7 @@ return {
       -- Configure AI tools
       tools = {
         opencode = {},
+        claude = {},
       },
     },
     -- Disable NES (Next Edit Suggestions) if you don't need Copilot integration
