@@ -60,7 +60,7 @@ return {
         lualine_y = {},
         lualine_z = {},
       },
-      extensions = { "oil", "man", "quickfix" },
+      extensions = { "man", "quickfix" },
     })
   end,
 }

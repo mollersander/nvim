@@ -1,5 +1,8 @@
+-- Fallback file manager. Replaced by lua/plugins/filebuf.lua — flip `enabled`
+-- here and disable filebuf to switch back.
 return {
   "stevearc/oil.nvim",
+  enabled = false,
   dependencies = { "nvim-tree/nvim-web-devicons" },
   keys = {
     { "-", "<CMD>Oil<CR>", desc = "Open parent directory in Oil" },
@@ -20,3 +23,4 @@ return {
     })
   end,
 }
+
