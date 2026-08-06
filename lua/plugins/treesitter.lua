@@ -8,6 +8,9 @@ return {
       ensure_installed = {
         "python",
         "rust",
+        "elixir",
+        "eex",
+        "heex",
         "yaml",
         "c",
         "dot",

@@ -27,10 +27,23 @@ return {
         end,
       })
 
+      -- elixir-ls ships as `elixir-ls` in mason's bin, which lspconfig uses by default
+      vim.lsp.config("elixirls", {
+        settings = {
+          elixirLS = {
+            dialyzerEnabled = true,
+            fetchDeps = false,
+            enableTestLenses = false,
+            suggestSpecs = true,
+          },
+        },
+      })
+
       vim.lsp.enable("basedpyright")
       vim.lsp.enable('lua_ls')
       vim.lsp.enable("ruff")
       vim.lsp.enable("mypy")
+      vim.lsp.enable("elixirls")
     end,
   },
   {
@@ -55,7 +68,7 @@ return {
     dependencies = { "mason-org/mason.nvim" },
     config = function()
       require("mason-lspconfig").setup({
-        ensure_installed = { "basedpyright" },
+        ensure_installed = { "basedpyright", "elixirls" },
         automatic_installation = true,
       })
     end,
